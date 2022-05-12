@@ -8,11 +8,16 @@ const login = (userObj,flag) =>{
       else{
           dispatch(failure())
       }
-      const success = (user) =>{
+      function success(user){
+        //   console.log(user)
          return {type:loginConstants.LOGIN_SUCCESS, user}
       }
-      const failure = () =>{
+      function failure(){
           return {type:loginConstants.LOGIN_FAILURE}
       }
   }
+}
+
+export const userActions= {
+    login
 }
