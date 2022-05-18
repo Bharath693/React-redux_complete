@@ -1,12 +1,20 @@
 import React from 'react'
 import { useSelector, connect } from 'react-redux';
+import Ratings from '../reusableComponents/Ratings';
+import Pagination from '../reusableComponents/pagination';
 
 const Home = () => {
   // console.log(UserLogin)
   const user = useSelector((state) =>console.log(state.LoginR.user))
   console.log(user)
   return (
-    <div>Home</div>
+    <div>
+      Home
+      <div>
+        <Ratings />
+        <Pagination />
+      </div>
+    </div>
   )
 }
 
